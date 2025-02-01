@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pegar Key</title>
+    <title>Copiar Link</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -39,9 +39,41 @@
 <body>
 
     <div class="container">
-        <h1>Pegar Key</h1>
-        <button onclick="window.open('https://rekonise.com/bypass-1-wfo09', '_blank')">Pegar Key</button>
+        <h1>Copiar Link</h1>
+        <button onclick="copiarLink()">Copiar Link</button>
+        <p id="mensagem" style="margin-top: 10px; color: green; display: none;">Link copiado com sucesso!</p>
     </div>
+
+    <script>
+        function copiarLink() {
+            // O link que será copiado
+            const link = "https://rekonise.com/bypass-1-wfo09";
+            
+            // Cria um campo de texto temporário
+            const inputTemp = document.createElement('input');
+            inputTemp.value = link;
+            document.body.appendChild(inputTemp);
+            
+            // Seleciona o conteúdo do campo de texto
+            inputTemp.select();
+            inputTemp.setSelectionRange(0, 99999); // Para dispositivos móveis
+
+            // Copia o conteúdo para a área de transferência
+            document.execCommand('copy');
+
+            // Remove o campo de texto temporário
+            document.body.removeChild(inputTemp);
+
+            // Exibe a mensagem de sucesso
+            const mensagem = document.getElementById('mensagem');
+            mensagem.style.display = 'block';
+
+            // Esconde a mensagem após 3 segundos
+            setTimeout(function() {
+                mensagem.style.display = 'none';
+            }, 3000);
+        }
+    </script>
 
 </body>
 </html>
