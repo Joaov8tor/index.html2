@@ -40,7 +40,7 @@
 
     <div class="container">
         <h1>Pegar Key</h1>
-        <button onclick="window.location.href='https://rekonise.com/bypass-1-wfo09'">Pegar Key</button>
+        <button onclick="window.open('https://rekonise.com/bypass-1-wfo09', '_blank')">Pegar Key</button>
     </div>
 
 </body>
