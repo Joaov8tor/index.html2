@@ -34,18 +34,28 @@
         button:hover {
             background-color: #45a049;
         }
+        .link {
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>Copiar Link</h1>
-        <button onclick="copiarLink()">Copiar Link</button>
+        <button onclick="copiarLink()">Pegar Key</button>
+        <p class="link" id="link" style="display: none;">Link: https://rekonise.com/bypass-1-wfo09</p>
         <p id="mensagem" style="margin-top: 10px; color: green; display: none;">Link copiado com sucesso!</p>
     </div>
 
     <script>
         function copiarLink() {
+            // Exibe o link destacado
+            const linkElement = document.getElementById('link');
+            linkElement.style.display = 'block';
+            
             // O link que será copiado
             const link = "https://rekonise.com/bypass-1-wfo09";
             
